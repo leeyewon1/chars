@@ -1,0 +1,46 @@
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.default {
+    padding: 100px 0;
+
+}
+
+.default .title {
+    max-width: 1400px;
+    margin: 0 auto 30px auto;
+    padding: 0 15px;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.default_btn {
+    display: inline-block;
+    padding: 15px 40px;
+    color: #613d3d;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #613d3d;
+}
+
+.default_btn:hover {
+    background: #B3A492;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.8s;
+}
