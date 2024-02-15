@@ -32,12 +32,27 @@ $(function () {
             .removeClass('on');
     });
 
-    $('.Review .arrows .left').on('click', function () {
+
+    $('.main_product_slide').slick({
+        slidesToShow: 5,
+        arrows: false,
+        dots: true,
+    });
+
+    $('.main_product .arrows .left').on('click', function () {
         $('.main_product_slide').slick('slickPrev');
     });
-    $('.Review .arrows .right').on('click', function () {
+    $('.main_product .arrows .right').on('click', function () {
         $('.main_product_slide').slick('slickNext');
     });
+
+
+    // $('.Review .arrows .left').on('click', function () {
+    //     $('.main_product_slide').slick('slickPrev');
+    // });
+    // $('.Review .arrows .right').on('click', function () {
+    //     $('.main_product_slide').slick('slickNext');
+    // });
 
     $('.totop').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 900)

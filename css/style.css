@@ -1,6 +1,6 @@
-* {
-  outline: solid 1px tomato-;
-}
+/* * {
+  outline: solid 1px tomato;
+} */
 
 .wrap {}
 
@@ -220,13 +220,14 @@
 .Visual_content h2 {
   display: block;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 .Visual_content span {
   display: block;
   font-size: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* 두번째 */
@@ -264,13 +265,14 @@
 .main_visual_content h2 {
   display: block;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 .main_visual_content span {
   display: block;
   font-size: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* 세번째 */
@@ -278,33 +280,39 @@
   background: #dbc9b557;
 }
 
-.visual_project .slogan {
-  position: absolute;
+.visual_project .project {
+  display: flex;
 }
+
+.visual_project .project>* {
+  flex: 1;
+}
+
 
 .visual_project .slogan h2 {
   display: block;
-  font-size: 28px;
-  line-height: 50px;
-  margin: 0 0 18px 0;
-  font-weight: 200;
+  font-size: 36px;
+  line-height: 45px;
+  margin: 0 0 20px 0;
+  font-weight: 500;
   color: #202124e0;
-  text-shadow: 0 0 1px #2021249a;
+  /* text-shadow: 0 0 1px #2021249a; */
 }
+
 
 .visual_project .slogan p {
-  display: block;
-  margin: 0 0 60px 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 32px;
+  margin: 0 0 50px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
   color: #202124da;
+
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-.visual_project .project_img {
-  display: block;
-  text-align: right;
-}
+.visual_project .project_img {}
+
+.visual_project .project_img figure {}
 
 /* 네번째 */
 
@@ -321,7 +329,7 @@
 
 .visual_product h2 {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 30px 0;
   text-align: center;
 }
@@ -336,10 +344,14 @@
 
 .visual_product .tab_menu li {
   font-size: 16px;
+
 }
 
 .visual_product .tab_menu li.on {
   color: #B3A492;
+  font-weight: 500;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #B3A492;
 }
 
 .visual_product .inner {
@@ -378,17 +390,17 @@
 
 .wide_banner .wide_content {
   width: 100%;
-  height: 600px;
+  height: 300px;
   overflow: hidden;
-  background: url(../images/banner_content.jpg) no-repeat center/cover;
+  background: url(../images/banner_content.jpg) no-repeat center center/cover;
   text-align: center;
 }
 
 .wide_banner .wide_content .slogan {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   color: #fff;
 }
 
@@ -396,34 +408,128 @@
   display: inline-block;
   font-size: 30px;
   font-weight: 600;
-  margin: 0 0 20px 0;
   text-shadow: 0 0 1px #2021249a;
+
+  margin: 0 0 10px 0;
 }
 
 .wide_banner .wide_content .slogan p {
+  display: block;
   font-size: 18px;
   font-weight: 300;
   text-shadow: 0 0 1px #2021249a;
 }
 
-.wide_banner .default_btn {
+.wide_banner .btn .default_btn {
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   padding: 15px 40px;
-  color: #613d3d;
+  color: #fff;
   font-size: 16px;
-  background: #fff;
-  border: 1px solid #613d3d;
+  background: transparent;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
-.default_btn:hover {
+.wide_banner .btn .default_btn:hover {
   background: #B3A492;
   color: #fff;
   border: 1px solid #fff;
   transition: 0.8s;
 }
+
+/* 리뷰 */
+
+.main_product {
+  position: relative;
+  padding: 100px 0;
+}
+
+.main_product .title h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.main_product .inner {}
+
+.main_product .main_product_slide {
+  margin: 0 -15px;
+}
+
+.main_product .main_product_slide .slick-dots {
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.main_product .main_product_slide .slick-dots li {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.main_product .main_product_slide .slick-dots li button {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  background: #fff;
+  color: #202124;
+  border: none;
+}
+
+.main_product .main_product_slide .slick-dots li.slick-active button {
+  background: #B3A492;
+  color: #fff;
+}
+
+.main_product .img_wrap {
+  border: 1px solid #B3A492;
+  height: 270px;
+}
+
+.main_product .img_wrap img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.main_product figure {
+  padding: 0 5px;
+}
+
+.main_product .arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1600px;
+  width: 100%;
+}
+
+.main_product .arrows i {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  font-size: 26px;
+  color: #8a8a8a;
+  padding: 10px;
+}
+
+.main_product .arrows .left {
+  left: 0;
+}
+
+.main_product .arrows .right {
+  right: 0;
+}
+
+
+
+
+
+
+
 
 /* 마지막 */
 
@@ -443,7 +549,7 @@
 .side_sec .side_content span {
   display: block;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px 0px 10px 0;
 }
 
@@ -505,9 +611,7 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
-
 }
-
 
 .Review .img_box_slide .slick-dots li.slick-active button {
   background: #d90019;
@@ -542,14 +646,12 @@
 }
 
 
-
-
 /* footer */
 
 .footer {
-  padding: 60px 0;
+  padding: 40px 0;
   background: #dbc9b557;
-  color: #202124;
+  color: #2f2f2f;
 }
 
 .footer .inner {
@@ -570,18 +672,18 @@
 }
 
 .footer .link li a {
-  vertical-align: -webkit-baseline-middle;
+  /* vertical-align: -webkit-baseline-middle; */
 }
 
 .footer .link li~li::before {
   content: "";
   position: absolute;
-  top: 70%;
-  left: -20%;
-  transform: translate(-60%, -50%);
+  top: 50%;
+  left: -15px;
+  transform: translate(0, -50%);
   width: 1px;
-  height: 10px;
-  background: #613d3d;
+  height: 8px;
+  background: hsla(0, 0%, 13%, 0.405);
 }
 
 .footer .company {
@@ -592,7 +694,7 @@
   display: inline-block;
   margin: 0 15px 0 0;
   font-size: 15px;
-  font-weight: 00;
+  font-weight: 400;
 }
 
 .footer .customaer {
@@ -649,8 +751,9 @@
 
 .totop i {
   padding: 10px;
-  background: #B3A492;
-  color: #fff;
+  background: #ffffffb9;
+  color: #5d5d5d;
   font-size: 24px;
   cursor: pointer;
+  border-radius: 50%;
 }
