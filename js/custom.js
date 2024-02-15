@@ -36,7 +36,7 @@ $(function () {
     $('.main_product_slide').slick({
         slidesToShow: 5,
         arrows: false,
-        dots: true,
+        dots: false,
     });
 
     $('.main_product .arrows .left').on('click', function () {
